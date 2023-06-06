@@ -1,0 +1,31 @@
+body {
+    font-size:22px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: #ffefd5;
+    /* color: darkblue; */
+
+    /* Using rgb for color - rgb->red,green,blue, 255 is the max value for each, all zeroes gives black and all
+    255 gives white */
+    color: rgb(0, 0, 0); 
+}
+
+p {
+    /* Overriding color of body */
+    /* rgba has one extra attribute alpha, that takes values from 0 to 1. This decides the transparency of the
+    text, with 0 being fully transparent and 1 being the darkest. */
+    color: #333;
+
+    /* Hex values-> 
+    color: #6_digits
+    first 2 for red, next for green, last two for blue. #000000 gives black
+    and #FFFFFF gives white. Pairs of same digits can be grouped.
+    For example, red - #FF0000 can be written as #F00. This can happen only if both digits are same for the 
+    color */
+
+    /* HSLA - Hue Saturation Lightness Alpha
+    Hue - from 0 to 360, where 0 and 360 are red, like a full circle
+    Saturation - 0 to 100%
+    Lightness - 0% is white, 50% is gray, 100% is black
+    Alpha - transparency */
+}
