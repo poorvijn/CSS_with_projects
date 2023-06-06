@@ -1,0 +1,61 @@
+/* Universal selector - selects all elements on the page, and not an example of inheritance, which means that
+if you applied a border here, each element would get that border and not only the parent/body*/
+/* * {
+    font-family: monospace;
+} */
+
+/* CASCADING -> STYLES ARE APPLIED FROM TOP TO BOTTOM, LAST WRITTEN RULE GETS DISPLAYED EXCEPT IN THE CASE
+OF USING CLASS SELECTORS, WHICH ARE GIVEN MORE PREFERENCE THAN ELEMENT SELECTORS  */
+
+/* Element selectors */
+
+/* Instead of body, we can also use html */
+html {
+    font-size: 22px;
+}
+
+main {
+    /* font-family: monospace; 
+    /* selects only elements inside the <main> element on the html page */
+}
+
+body {
+    /* Shows inheritance. Things related to font and typography are inherited by child elements, but not things
+    like borders etc */
+    font-size: 22px;
+
+    /* NOTE: forms do not generally inherit, to do that select form elements and set their property: inherit */
+}
+
+p {
+    color: purple;
+}
+
+/* Grouping selectors */
+h1, h2 {
+    color: blue;
+}
+
+/* Selecting nested elements, for example, to select a span within p, we would use p span
+p span {
+    text-transform: uppercase;
+    background-color:  gold;
+}
+*/
+
+/* Doing the same thing as above using a class */
+.highlight {
+    text-transform: uppercase;
+    background-color:  gold;
+}
+
+/* Class selectors - more specific, hence given preference over element selectors, even if element selectors are
+written after class selectors in the css file */
+.gray {
+    color: gray;
+}
+
+/* ID selectors */
+#second {
+    font-style: italic;
+}
