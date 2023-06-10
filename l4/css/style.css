@@ -1,0 +1,34 @@
+/* pixels -> overrun the user settings */
+
+/* percentage -> always relative to the parent element, takes up x% of the parent. If parent takes 50%, and
+child element takes 50%, then it is actually taking 50% from its parent, which is 50% of 50% or 25% of the full
+page */
+
+/* rem -> root em, where the size is determined by the size of the root(html) element set by the browser
+and does not depend on the parent element. */
+
+/* em -> looks at parent element and amplifies the size of the parent element, not the root. If parent element
+has no size set by us, then the child looks at root */
+
+/* When you set the font-size using rem, you can use this as a base to set the padding/margin using em.
+This means that the padding or margin will be applied to the element relative to its own font size in rem.
+Ex: if font-size is 3rem, which is 48 pixels and we set padding to 0.5 em, we get a padding half of 3rem
+which is 24 pixels. */
+
+h1 {
+    border: 2px dashed red;
+    width:50%;
+    font-size: 3rem;
+    padding: 0.5em;
+}
+
+main {
+    font-size: 2rem;
+}
+
+/* ch - characters, can be used to decide how many characters can be put on a line before the line wraps
+using the width property */
+p {
+    /* line wraps after 40 characters */
+    width: 40ch;
+}
