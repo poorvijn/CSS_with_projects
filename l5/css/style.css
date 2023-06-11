@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* when we set to border-box, the width we set for the element will include the content+padding+border and
+    not just the content, like it is when set to content-box by default */
+}
+.container {
+    border: 10px double red;
+    font-size: 1.5rem;
+    /* 1 em margin and padding-> 1 * 1.5 rem font-size = 1.5rem */
+    margin: 1.5em;
+    padding: 1.5em;
+    /* outline -> not included in the box model */
+    outline: 5px solid purple;
+    /* outline-offset: determines distance of outline from
+    the margin, +ve value pushes it out of the border, and negative
+    value pushes it inside the border */
+    outline-offset: -20px;
+}
+
+.circle
+{
+    width:100px;
+    height:100px;
+    background-color: gold;
+    border: 2px solid black; 
+    outline: 2px solid red;
+    outline-offset: 0.25rem;
+    margin: 3rem auto;
+    /* to make a circle, set border-radius to half of the width */
+    border-radius: 50px;
+}
