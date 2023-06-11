@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    padding: 10%;
+    /* this will not affect form input, and the form button */
+    font-size: 2rem;
+    /* font-family: choice 1, choice 2 etc. Browser renders font one by one starting from most preferable, which
+    is choice 1. If this is not found on the device, then it proceeds to choice 2 and so on. Whenever a 
+    font name has spaces in it, it is mentioned in quotes. For example, 'Times New Roman' */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* input, button {
+    font: inherit;
+} */
+
+/* p {
+    CSS rules on text that are not affected by font settings
+    text-decoration, text-transfrom etc 
+    
+    **Difference between centre-aligned and justify: in centre align, the ends of the text are not aligned and
+    each sentence may end at a different point. In justify, both ends of all sentences occur at the same points
+    text-indent: 2em; -> gives an indentation to the first line from the left
+
+    Some other properties that don't depend on font:
+    line-height-> can take just numbers as values, ex: line-height: 1.5;
+    letter-spacing
+    word-spacing
+} */
+
+p {
+    line-height: 1.5;
+}
