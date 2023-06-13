@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    padding: 10%;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* pseudo-classes have more specificity than normal classes, so it is recommended to apply
+the rules on the normal class before pseudo-class */
+
+a {
+   color: hsl(207, 44%, 49%);
+}
+
+/* maintain the order of pseudo-classes, visited, hover and focus, active */
+a:visited {
+    color: purple;
+}
+
+/* focus allows you to navigate through the links using tab */
+a:hover, a:focus {
+    color: hsl(207, 44%, 49%, 0.8);
+    /* you can also use the opacity property here
+    opacity: value from 0(transparent) to 1(darkest) */
+}
+
+a:active {
+    color: red;
+}
