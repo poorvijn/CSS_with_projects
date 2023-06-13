@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    padding: 5% 10%;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+ol {
+    list-style-type: lower-alpha;
+    padding: 0;
+}
+
+ul {
+    list-style-type: square;
+    list-style-position: inside;
+    text-align: center;
+    color: #00f;
+    line-height: 1.6;
+
+    /* using image as bullet point */
+    /* list-style-image: url(../images/checkmark.png); */
+
+    /* we can set list-style type, image and position in one rule
+    using shorthand. In this case, the type would be the fallback in case
+    the image cannot be loaded */
+    /* list-style: square url(../images/checkmark.png) inside; */
+}
+
+/* used to change property of specific list items and accepts list item number
+or 'odd' or 'even', which changes the property of those specific 
+list items only */
+ul li:nth-child(even) {
+    color: red;
+}
+
+/* ::marker is a pseudo element used to change properties of bullet points
+only without affecting the text 
+Here, if we don't put ul, the ::marker selects the ordered list as well, though we've
+set the list-style-type to none*/
+ul ::marker {
+    color: red;
+    font-family: fantasy;
+    font-size: 1em;
+    content: 'Only 5$ >> ';
+}
