@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+body {
+    font-size:1.5rem;
+    font-family: 'Roboto',sans-serif;
+}
+
+.block {
+    width:30vw;
+    height: 30vw;
+    background-color: black;
+    color:white;
+    padding: 1rem;
+}
+
+.left {
+    /* takes it out of the normal flow of the page */
+    float: left;
+    margin-right: 1rem;
+}
+
+.right {
+    float: right;
+    margin-left:1rem;
+}
+
+/* Clears both sides and ensures the elements after it are not wrapping around a floated element that is present on top of this div */
+.clear {
+    clear: both;
+}
+
+/* Without the last rule of display: flow-root, this section/any container that has floated elements would not consider the 
+floated element as a part of itself and it would only apply its properties on the other elements like the paragraph in this 
+case. So, here the section would expand only based on the size of the paragraph element*/
+section {
+    background-color: bisque;
+    border: 1px solid #333;
+    padding: 1rem;
+
+    /* we can fix the problem in two ways 
+    first way is the older way of setting overflow: auto, second way is the modern way*/
+    display: flow-root;
+}
