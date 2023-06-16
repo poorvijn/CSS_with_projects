@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+body {
+    font-size:1.5rem;
+    font-family: "Roboto",sans-serif;
+}
+
+.columns {
+    /* column-count: 4; 
+       column-width: 250px; minimum width of each column would be 250px*/
+       columns : 4 250px;
+       column-rule:3px solid #333;
+       column-gap: 3rem;
+}
+
+/* Remove top margin from each paragraph so that the top of the first para aligns with the rest of the paragraphs */
+.columns p {
+    margin-top:0;
+}
+
+.columns h2 {
+    background-color: #333;
+    color: white;
+    margin-top:0;
+    padding: 1rem;
+    break-inside:avoid;
+    /* Not recommended, but if you use this it will ensure that your h2 is always in the second column. However, when the screen
+    size becomes too small and you expect to have just one column with h2, the h2 will not appear. It will only appear if you have
+    more than one column, check it out if you want to see how */
+    /* break-before:column; */
+}
+
+.columns .quote {
+    color:#333;
+    text-align: center;
+    font-size:3rem;
+    column-span:all;
+    margin-top: 2rem;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
