@@ -18,6 +18,7 @@ body {
   min-height: 400px;
   margin-inline: auto;
   border: 1px solid black;
+  /* by default flex-flow value is row, so when you set display: flex, the content gets aligned along row/rows */
   display: flex;
   /* gap between items */
   gap:1rem;
