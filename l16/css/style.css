@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Utility Classes */
+.nowrap {
+  white-space: nowrap;
+}
+
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+/* End of Utility Classes */
+
+/* Without applying this property, the image would be inline by default, so it would always have some
+padding at the bottom */
+img {
+  display: block;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  min-height: 100vh;
+  background-color: aliceblue;
+
+  /* background-image: img1 img2 ... 
+  IMPORTANT: the images are put on top of one another from left to right, not from right to left, this means that img2 will be below img1 and so on*/
+
+  /* linear-gradient qualifies as a background image.to-something indicates that the gradient would start from the
+  opposite direction and go towards the direction we have mentioned.
+  For example, to-left means that we would start with the first colour
+  from the right, and move towards the left */
+  background-image: url(../img/bubbles.png),linear-gradient(to left, steelblue, white);
+  /* repeat-y -> only repeat from top to bottom */
+  background-repeat: repeat-y, no-repeat;
+  background-position: right, center;
+  background-size: 20%, auto;
+}
+
+.container {
+  /* backup colour incase the image doesnt load */
+  background-color: rgb(251,210,156);
+  background-image: url('../img/map-2176x1451.png');
+  /* Default value is repeat, kept here for reference */
+  background-repeat: no-repeat;
+  /* position: y-axis x-axis */
+  background-position: top;
+  /* To make images bigger than the container fit into the container */
+  background-size: cover;
+}
+
+.hero {
+  border-bottom: 2px solid black;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  background-color: hsl(0, 0%, 0%,0.35);
+}
+
+h1 {
+  font-size: 500%;
+  color: aliceblue;
+  /* text-shadow: x-axis y-axis blur-value shadow colour */
+  text-shadow: 2px 2px 5px black;
+}
+
+.profile-pic-figure {
+  width: 35%;
+}
+
+.profile-pic-figure img {
+  width: 100%;
+  height:auto;
+  min-width: 100px;
+  border: 5px double gray;
+  border-radius: 50%;
+}
+
+.example {
+  margin-top: 1rem;
+  padding-left: 20px;
+  border: 1px solid red;
+}
+
+/* Automatically makes image responsive because of the use of percentage and auto */
+.example img {
+  width: 25%;
+  height: auto;
+}
+
+.clip {
+  font-weight: 800;
+  font-size: 18rem;
+  text-align: center;
+  background-image: url('../img/scenic-2200x1331.png');
+  /* Same as setting background-size: cover */
+  background-size: 100%;
+  text-transform: uppercase;
+  /* For chrome and other browsers that need the -webkit prefix to use this property */
+  -webkit-background-clip: text;
+  /* For browsers like firefox that do not need the webkit prefix */
+  background-clip: text;
+  color: transparent;
+}
