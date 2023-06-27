@@ -38,6 +38,7 @@ footer {
   background-color: #1e293b;
   color: whitesmoke;
   text-align: center;
+  z-index: 1;
 }
 
 header {
@@ -53,19 +54,26 @@ nav {
   justify-content: space-evenly;
 }
 
-nav a,
-nav a:visited {
+/* Pseudo-classes or pseudo-selectors are those that are based on/apply to STATES of the element,
+like here a link can be in visited state, hover, focus etc */
+/* :any-link stands for both :link and :visited, where :link is just another way of saying nav a */
+nav a:any-link {
   color: #000;
 }
 
-nav a:hover,
-nav a:focus {
+/* :is takes on specificity based on the highest specificity within the selectors in the
+parentheses, if we have a class/id inside the parentheses, it will be of higher specificity */
+nav :is(a:hover, a:focus) {
   color: hsla(0, 0%, 20%, 0.6);
 }
 
+nav a:active {
+  color: red;
+}
+
 main {
-  flex-grow: 1;
   display: flex;
+  flex-grow:1;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
@@ -99,12 +107,49 @@ footer {
   border-radius: 50%;
 }
 
+/* Selects images without an alt attribute */
+.card img:not([alt]) {
+  border: 2px solid red;
+}
 .card figcaption {
   font-weight: bolder;
   font-size: 2rem;
   margin: 1rem;
   text-align: center;
 }
+
+/* displays content after the current content of the figcaption */
+/* .card figcaption::after {
+  content: ' hello';
+} */
+
+.card p {
+  position: relative;
+}
+
+.card p::before {
+  content: open-quote;
+  font-size: 3em;
+  position:absolute;
+  top:-0.25em;
+  left:-0.5em;
+}
+
+.card p::after {
+  content: close-quote;
+  font-size: 3em;
+  position:absolute;
+  top:-0.25em;
+  right:-0.5em;
+}
+
+/* Applies the rules on the last selected card */
+.card:target {
+  border: 2px solid rebeccapurple;
+}
+
+/* .card:nth-child(number) selects the child based on the arrangement in the HTML code,
+and not their arrangement on the webpage */
 
 /* || SMALL */
 @media screen and (min-width: 576px) {
