@@ -11,7 +11,7 @@
 :root {
   /* FONT */
   --FF: "Nunito", sans-serif;
-  --FS: 1.5rem;
+  --FS: min(2.25rem, 3vh);
   --FS-XL: 3rem;
 
   /* COLOR */
@@ -31,7 +31,7 @@
   --BORDERS: 2px solid var(--DARK-COLOR);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --BGCOLOR: #000;
     --ALT-BGCOLOR: #333;
