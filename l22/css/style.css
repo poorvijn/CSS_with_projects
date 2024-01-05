@@ -92,7 +92,8 @@ div:last-child:hover{
 
   
 /* transform: rotate() property---
-rotate is same as rotateZ(numberdeg). rotateX() rotates from top to bottom, rotateY() rotates from left to right */
+rotate is same as rotateZ(numberdeg). rotateX() rotates from top to bottom, rotateY() rotates from left to right
+and rotateZ() rotates clockwise along the page when deg is positive, or anticlockwise otherwise */
 
 /* transform: translate() property---
 translate(x%, y%). translateX() moves element left and right, translateY() moves element up and down*/
