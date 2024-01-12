@@ -149,7 +149,9 @@ footer {
 }
 
 /* .card:nth-child(number) selects the child based on the arrangement in the HTML code,
-and not their arrangement on the webpage */
+and not their arrangement on the webpage that may be due to media queries
+::before pseudo-element appears before or to the left of the element
+::after pseudo-element appears after or to the right of the element */
 
 /* || SMALL */
 @media screen and (min-width: 576px) {
