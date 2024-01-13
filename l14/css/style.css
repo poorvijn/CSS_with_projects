@@ -22,15 +22,25 @@ body {
   display: flex;
   /* gap between items */
   gap:1rem;
-  /* Horizontal alignment of flex items */
+  /* Horizontal alignment of flex items when flex-direction is row, vertical when it is column
+  space-around: space between containers evenly split except at the borders of the container
+  space-between: edge-items coincide with borders of the flex container with all items having 
+  equal space between them
+  space-evenly: spacing is same between items, as well as between borders of the containers and the items
+   */
   justify-content: center;
-  /* Vertical alignment of individual flex items */
+  /* Vertical alignment of individual flex items when flex-direction is row, horizontal when it is column */
   align-items:center;
-  /* To change flex direction so that items are stacked on top of one another. This causes align-items to apply horizontally and justify-content to apply vertically, thus reversing their roles as when the flex-direction is set to horizontal */
+  /* flex-flow: direction wrap/nowrap */
   flex-flow: row wrap;
-  /* Alignment of rows of flex items, each row considered together as one */
+  /* Alignment of rows/columns of flex items, each row/column considered together as one */
   align-content: space-evenly;
 } 
+
+/* To center anything inside a container, write this code in the CONTAINER 
+  display:flex; ->changes container to flex, with direction as row and nowrap by default
+  justify-content: centers content inside the container horizontally
+  align-items: centers content vertically */
 
 /* Individual flex items */
 .box {
@@ -47,7 +57,8 @@ body {
     /* Vertical centering */
     align-items:center;
 
-    /* The value here determines how each box would grow to fill up the space of its container, for example, a value of 1 would suggest that all boxes would grow at the same rate to fill up the container, THIS IS APPLIED AFTER flex-basis property*/
+    /* The value here determines how each item would grow to fill up the space of its container, for example, 
+    a value of 1 would suggest that all items would grow at the same rate to fill up the container*/
     /* flex-grow:1; */
     
     /* Opposite of flex-grow */
@@ -63,6 +74,7 @@ body {
 /* Overrides the flex-shrink:1 */
 .box:nth-child(2) {
     flex: 2 2 150px;
-    /* order -> by default has a value of 0, which means that the element stays where it is supposed to be rendered on the page. A value higher than 0 would shift the element towards the end, a value less than zero would shift it towards the beginning */
+    /* order -> by default has a value of 0, which means that the element stays where it is supposed to be rendered on the page. 
+    A value higher than 0 would shift the element towards the end, a value less than zero would shift it towards the beginning */
     order:1;
 }
