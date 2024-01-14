@@ -35,9 +35,13 @@ body {
   padding: 1rem;
 }
 
+/* default position: static */
+
 /* position:absolute, sets position according to its most recent ancestor element, which has position: relative.
 If this div has no ancestor element with position: relative, it will place itself by considering the browser
-window as its parent */
+window as its parent.
+position: absolute can also be used to something off the page without affecting accessibility and without 
+completely removing the element from the page, which is done by display: none and opacity: 0 */
  .absolute {
   background-color: #00f;
   position: absolute;
@@ -60,7 +64,8 @@ whether the parent is set to relative or not */
 
 /* Unless you change the initial position of the div, it is going to stay where it is. But here we have set
 the top to 100px. So the div aligns itself 100px below the top of the browser and stays fixed to its position 
-even on scrolling. This is irrespective of whether any parent has relative positioning or not */
+even on scrolling. This is irrespective of whether any parent has relative positioning or not. Fixed elements
+always align themselves taking the browser window as their parent */
 .fixed {
   background-color: green;
   position: fixed;
