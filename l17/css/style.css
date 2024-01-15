@@ -51,6 +51,9 @@ footer {
 
 /* Media queries */
 
+/*min-width: starting from
+max-width: upto  */
+
 /* SMALL */
 @media screen and (min-width: 576px)
 {
@@ -92,6 +95,7 @@ footer {
 }
 
 /* MOBILE DEVICE LANDSCAPE */
+/* min-aspect-ratio: width/height */
 @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4)
 {
     body {
