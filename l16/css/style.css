@@ -29,7 +29,7 @@ body {
   background-color: aliceblue;
 
   /* background-image: img1 img2 ... 
-  IMPORTANT: the images are put on top of one another from left to right, not from right to left, this means that 
+  IMPORTANT: the images are put on top of one another from right to left, this means that 
   img2 will be below img1 and so on*/
 
   /* linear-gradient qualifies as a background image.to-something indicates that the gradient would start from the
