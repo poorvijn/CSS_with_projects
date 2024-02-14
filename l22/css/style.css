@@ -51,7 +51,7 @@ div:hover{
     transition-duration: 2s, 3s;
     transition-delay: 0.5s; 
     transition-timing-function: linear; --> ease is default */
-    /* transition:elements to apply to  time to complete transition timing delay in transition */
+    /* transition:elements to apply to,  time to complete transition, timing, delay in transition */
     transition: all 2s ease-in-out 0.5s;
 }
 
